@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del gato</title>
+</head>
+<body>
+    <h1>Juego "GATO"</h1>
+    
+    <table>
+        <tr>
+            <th>
+                <input type="text" id = "n-1">
+            </th>
+            <th>
+                <input type="text" id = "n-2">
+            </th>
+            <th>
+                <input type="text" id = "n-3">
+            </th>
+            
+        </tr>
+        <tr>
+            <th>
+                <input type="text" id = "n2-1">
+            </th>
+            <th>
+                <input type="text" id = "n2-2">
+            </th>
+            <th>
+                <input type="text" id = "n2-3">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="text" id = "n3-1">
+            </th>
+            <th>
+                <input type="text" id = "n3-2">
+            </th>
+            <th>
+                <input type="text" id = "n3-3">
+            </th>
+        </tr>
+        <tr>
+            <button onclick="ganarX ()">Calcular</button>
+        </tr>
+        
+        
+    </table>
+</body>
+<script>
+    function ganarX (){
+        let n1 = document.getElementById('n-1').value;
+        let n2 = document.getElementById('n-2').value;
+        let n3 = document.getElementById('n-3').value;
+        let n21 = document.getElementById('n2-1').value;
+        let n22 = document.getElementById('n2-2').value;
+        let n23 = document.getElementById('n2-3').value;
+        let n31 = document.getElementById('n3-1').value;
+        let n32 = document.getElementById('n3-2').value;
+        let n33 = document.getElementById('n3-3').value;
+
+        if (n1 == "x" && n2 == "x" && n3 == "x") {
+            alert("Ganaste = X");
+        }
+        if (n21 == "x" && n22 == "x" && n23 == "x") {
+            alert("Ganaste = x");
+        }
+        if (n31 == "x" && n32 == "x" && n33 == "x") {
+            alert("Ganaste = x");
+        }
+
+        if (n1 == "x" && n21 == "x" && n31 == "x") {
+            alert("Ganaste = X");
+        }
+        if (n2 == "x" && n22 == "x" && n32 == "x") {
+            alert("Ganaste = X");
+        }
+        if (n3 == "x" && n23 == "x" && n33 == "x") {
+            alert("Ganaste = X");
+        }
+
+        if (n1 == "x" && n22 == "x" && n33 == "x") {
+            alert("Ganaste = X");
+        }
+
+        if (n31 == "x" && n22 == "x" && n3 == "x") {
+            alert("Ganaste = X");
+        }
+        //-----------------------------------------------
+        if (n1 == "o" && n2 == "o" && n3 == "o") {
+            alert("Ganaste = O");
+        }
+        if (n21 == "o" && n22 == "o" && n23 == "o") {
+            alert("Ganaste = O");
+        }
+        if (n31 == "o" && n32 == "o" && n33 == "o") {
+            alert("Ganaste = O");
+        }
+
+        if (n1 == "o" && n21 == "o" && n31 == "o") {
+            alert("Ganaste = O");
+        }
+        if (n2 == "o" && n22 == "o" && n32 == "o") {
+            alert("Ganaste = O");
+        }
+        if (n3 == "o" && n23 == "o" && n33 == "o") {
+            alert("Ganaste = O");
+        }
+
+        if (n1 == "o" && n22 == "o" && n33 == "o") {
+            alert("Ganaste = X");
+        }
+
+        if (n31 == "o" && n22 == "o" && n3 == "o") {
+            alert("Ganaste = O");
+        }
+
+
+    }
+
+    function ganarO (){
+        
+       
+
+
+    }
+</script>
+</html>
