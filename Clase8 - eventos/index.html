@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Uno</th>
+            <th>Operación</th>
+            <th>N2</th>
+            <th>Total</th>
+            <th>Acción</th>
+        </tr>
+        <tr>
+            <td>
+                <input class="otro" type="text" name="n1" id="n1">
+            </td>
+            <td>
+                <label class="otro">Texto de prueba</label>
+            </td>
+            <td>
+                <input type="text" name="n1" id="n1">
+            </td>
+            <td>
+                <input perro="jaja" onclick="saludo(this)" type="text" name="n1" id="n1">
+            </td>
+            <td>
+                <button numero="1" perro="firulais" id="btn-ok" onclick="saludo(this)">ok</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    
+    function saludo(elemento){
+        var nombre = elemento.getAttribute('perro');
+        alert(nombre);
+    }
+
+    var elementos = document.getElementsByClassName('otro');
+    for(var i = 0; i < elementos.length; i++){
+        console.log(elementos[i]);
+    }
+   
+
+</script>
+</html>
