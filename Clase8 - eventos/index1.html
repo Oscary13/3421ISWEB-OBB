@@ -63,7 +63,6 @@
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
-                <th>Acción</th>
             </tr>
         </thead>
         <tbody id="carrito">
@@ -76,12 +75,13 @@
 <script>
 
 function agregarProducto(producto){
+    var total = 1;
     var nombre = producto.getAttribute('nombre');
     var precio = producto.getAttribute('precio');
     var cantidad = producto.getAttribute('cantidad');
     var id = producto.getAttribute('producto-id');
 
-    document.getElementById('carrito').innerHTML += '<tr><td>'+id+'</td><td>'+nombre+'</td><td>'+precio+'</td><td>1</td></tr>';
+    document.getElementById('carrito').innerHTML += '<tr><td>'+id+'</td><td>'+nombre+'</td><td>'+precio+'</td><td>'+total+'</td></tr>';
 
 }
    
