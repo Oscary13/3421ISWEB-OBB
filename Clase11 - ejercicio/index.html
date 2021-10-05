@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <style>
+        .tabla{
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .tabla td{            
+            border-bottom: cadetblue solid 1px;
+        }
+        .tabla th{
+            color: rgb(48, 59, 8);
+        }
+        .tabla2{
+        	text-align: center;
+        	color: red;
+        }
+        .tabla3{
+        	text-align: center;
+        	color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="tabla3"><b>CARRITO DE COMPRAS</b></h1>
+
+	<h2 class="tabla1"><b>ARTÍCULOS</b></h2>
+	<table class="tabla" style="margin-top: 5%;">
+    <thead>
+    <tr>
+        <th><b>ARTÍCULOS</b></th>
+        <th><b>PRECIO</b></th>
+        <th><b>ACCIÓN</b></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>PlayStation 5</td>
+        <td>$13999</td>
+        <td><input type="number" id="uno" nombre="PlayStation 5" precio="13999" class="articulos"><b></b></input></td>
+    </tr>
+    <tr>
+        <td>Xbox Series S</td>
+        <td>$7714</td>
+        <td><input type="number" id="dos" nombre="Xbox Series S" precio="7714" class="articulos"><b></b></input></td>
+    </tr>
+    <tr>
+        <td>Nintendo switch</td>
+        <td>$7106</td>
+        <td><input type="number" id="tres" nombre="Nintendo Switch" precio="7106" class="articulos"><b></b></input></td>
+    </tr>
+   
+    </tbody>
+   
+    
+</table>
+<br><br>
+<label id="muestra" for=""><b>Total: </b></label>
+<br><br>
+<label id="muestra2" for=""><b>Total: </b></label>
+    
+</body>
+<script src="jquery.main.js"></script>
+<script>
+    var arrayArticulos = [];
+    var total = 0;
+    var total2 = 0;
+
+    $(".articulos").change(function(){
+        var cantidad = $(this).val();
+        console.log(cantidad);
+        var precio = parseInt($(this).attr("precio"));
+        console.log(precio);
+        var multi = (cantidad* precio);
+        console.log(total);
+        total = multi;
+
+        total2 = multi + multi;
+
+        console.log(total);
+        $("#muestra").html("Total:" + total);
+        $("#muestra2").html("Total:" + total);
+    });
+
+
+
+</script>
+</html>
