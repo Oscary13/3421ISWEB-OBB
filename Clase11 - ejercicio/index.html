@@ -65,8 +65,8 @@
 <table class="tabla" style="margin-top: 5%;">
     <tbody>
         <tr>
-            <td>ARTICULO</td>
-            <td>PRECIO</td>
+            <td><b>ARTICULO</b></td>
+            <td><b>PRECIO</b></td>
         </tr>
         <tr>
             <td id="name1"></td>
@@ -93,12 +93,6 @@
     var arrayArticulos = [];
     var total = 0;
     var total2 = 0;
-
-    $(".ariculos").change(function(){
-        
-    });
-    
-
     $("#uno").change(function(){
         var nombre = ($(this).attr("nombre"));
         $("#name1").html(nombre);
@@ -107,8 +101,6 @@
         var multi = (cantidad* precio);
         total = multi;
         total2 = multi + multi;
-        $("#muestra").html("Total:" + total);
-        $("#muestra2").html("Total:" + total);
         $("#total1").html("$ "+total);
         arrayArticulos[0] = total;
         
@@ -121,8 +113,6 @@
         var multi = (cantidad* precio);
         total = multi;
         total2 = multi + multi;
-        $("#muestra").html("Total:" + total);
-        $("#muestra2").html("Total:" + total);
         $("#total2").html("$ "+total);
         arrayArticulos[1] = total;
     });
@@ -134,7 +124,6 @@
         var multi = (cantidad* precio);
         total = multi;
         total2 = multi + multi;
-        $("#muestra2").html("Total:" + total);
         $("#total3").html("$ "+total);
         arrayArticulos[2] = total;
     });
