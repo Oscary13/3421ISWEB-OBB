@@ -99,14 +99,18 @@
     var total = 0;
     var total2 = 0;
     $("#uno").change(function(){
-        var nombre = ($(this).attr("nombre"));
-        $("#name1").html(nombre);
+        
         var cantidad = $(this).val();
         
-        if (cantidad < 0) {
-            alert("No puedes escribir numeros negativos");
+        if (cantidad <= 0) {
+            alert("CANTIDAD NO VALIDA O IGUAL A 0");
+            arrayArticulos[0] = 0;
+            $("#name1").html("");
+            $("#total1").html("");
         }
         else{
+            var nombre = ($(this).attr("nombre"));
+            $("#name1").html(nombre);
             var precio = parseInt($(this).attr("precio"));
             var multi = (cantidad* precio);
             total = multi;
@@ -118,13 +122,17 @@
     });
 
     $("#dos").change(function(){
-        var nombre = ($(this).attr("nombre"));
-        $("#name2").html(nombre);
+        
         var cantidad = $(this).val();
-        if (cantidad < 0) {
-            alert("No puedes escribir numeros negativos");
+        if (cantidad <= 0) {
+            alert("CANTIDAD NO VALIDA O IGUAL A 0");
+            arrayArticulos[1] = 0;
+            $("#name2").html("");
+            $("#total2").html("");
         }
         else{
+            var nombre = ($(this).attr("nombre"));
+            $("#name2").html(nombre);
             var precio = parseInt($(this).attr("precio"));
             var multi = (cantidad* precio);
             total = multi;
@@ -135,13 +143,17 @@
         
     });
     $("#tres").change(function(){
-        var nombre = ($(this).attr("nombre"));
-        $("#name3").html(nombre);
+        
         var cantidad = $(this).val();
-        if (cantidad < 0) {
-            alert("No puedes escribir numeros negativos");
+        if (cantidad <= 0) {
+            alert("CANTIDAD NO VALIDA O IGUAL A 0");
+            arrayArticulos[2] = 0;
+            $("#name3").html("");
+            $("#total3").html("");
         }
         else{
+            var nombre = ($(this).attr("nombre"));
+            $("#name3").html(nombre);
             var precio = parseInt($(this).attr("precio"));
             var multi = (cantidad* precio);
             total = multi;
