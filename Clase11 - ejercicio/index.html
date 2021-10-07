@@ -47,17 +47,17 @@
     <tr>
         <td>PlayStation 5</td>
         <td>$13999</td>
-        <td><input type="number" id="uno" nombre="PlayStation 5" precio="13999" class="articulos"><b></b></input></td>
+        <td><input type="number" min="0" id="uno" nombre="PlayStation 5" precio="13999" class="articulos"><b></b></input></td>
     </tr>
     <tr>
         <td>Xbox Series S</td>
         <td>$7714</td>
-        <td><input type="number" id="dos" nombre="Xbox Series S" precio="7714" class="articulos"><b></b></input></td>
+        <td><input type="number" min="0" id="dos" nombre="Xbox Series S" precio="7714" class="articulos"><b></b></input></td>
     </tr>
     <tr>
         <td>Nintendo switch</td>
         <td>$7106</td>
-        <td><input type="number" id="tres" nombre="Nintendo Switch" precio="7106" class="articulos"><b></b></input></td>
+        <td><input type="number" min="0" id="tres" nombre="Nintendo Switch" precio="7106" class="articulos"><b></b></input></td>
     </tr>
     </tbody>
 </table>
@@ -102,35 +102,53 @@
         var nombre = ($(this).attr("nombre"));
         $("#name1").html(nombre);
         var cantidad = $(this).val();
-        var precio = parseInt($(this).attr("precio"));
-        var multi = (cantidad* precio);
-        total = multi;
-        total2 = multi + multi;
-        $("#total1").html("$ "+total);
-        arrayArticulos[0] = total;
+        
+        if (cantidad < 0) {
+            alert("No puedes escribir numeros negativos");
+        }
+        else{
+            var precio = parseInt($(this).attr("precio"));
+            var multi = (cantidad* precio);
+            total = multi;
+            total2 = multi + multi;
+            $("#total1").html("$ "+total);
+            arrayArticulos[0] = total;
+        }
         
     });
+
     $("#dos").change(function(){
         var nombre = ($(this).attr("nombre"));
         $("#name2").html(nombre);
         var cantidad = $(this).val();
-        var precio = parseInt($(this).attr("precio"));
-        var multi = (cantidad* precio);
-        total = multi;
-        total2 = multi + multi;
-        $("#total2").html("$ "+total);
-        arrayArticulos[1] = total;
+        if (cantidad < 0) {
+            alert("No puedes escribir numeros negativos");
+        }
+        else{
+            var precio = parseInt($(this).attr("precio"));
+            var multi = (cantidad* precio);
+            total = multi;
+            total2 = multi + multi;
+            $("#total2").html("$ "+total);
+            arrayArticulos[1] = total;
+        }
+        
     });
     $("#tres").change(function(){
         var nombre = ($(this).attr("nombre"));
         $("#name3").html(nombre);
         var cantidad = $(this).val();
-        var precio = parseInt($(this).attr("precio"));
-        var multi = (cantidad* precio);
-        total = multi;
-        total2 = multi + multi;
-        $("#total3").html("$ "+total);
-        arrayArticulos[2] = total;
+        if (cantidad < 0) {
+            alert("No puedes escribir numeros negativos");
+        }
+        else{
+            var precio = parseInt($(this).attr("precio"));
+            var multi = (cantidad* precio);
+            total = multi;
+            total2 = multi + multi;
+            $("#total3").html("$ "+total);
+            arrayArticulos[2] = total;
+        }
     });
     $(".articulos").change(function(){
         console.log(arrayArticulos[0]);
