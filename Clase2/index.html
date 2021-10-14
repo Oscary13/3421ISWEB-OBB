@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de personas</title>
+    <style>
+        .tabla{
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .tabla td{            
+            border-bottom: cadetblue solid 1px;
+        }
+        .tabla th{
+            color: rgb(48, 59, 8);
+        }
+        .tabla2{
+        	text-align: center;
+        	color: red;
+        }
+        .tabla3{
+        	text-align: center;
+        	color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tabla3"><b>DATOS</b></h1>
+
+	<table class="tabla" style="margin-top: 5%;">
+    <thead>
+    <tr>
+        <th><b>NOMBRE</b></th>
+        <th><b>APELLIDO</b></th>
+        <th><b>ACCIÓN</b></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Marcos</td>
+        <td>Hernandez</td>
+        <td><button id="uno" nombre="Marcos" apellido="Hernandez" descripcion= "Le gusta jugar futbol" clase="personas">Ver más</button></td>
+    </tr>
+    <tr>
+        <td>Raul</td>
+        <td>Cepeda</td>
+        <td><button id="dos" nombre="Raul" apellido="Cepeda" descripcion= "Le gusta ver series en Netflix" clase="personas">Ver más</button></td>
+    </tr>
+    <tr>
+        <td>Javier</td>
+        <td>Huato</td>
+        <td><button id="tres" nombre="Javier" apellido="Huato" descripcion= "Le gusta programar" clase="personas">Ver más</button></td>   
+    </tr>
+    </tbody>
+</table>
+<br><br>
+<table class="tabla" style="margin-top: 5%;">
+    <tbody>
+        <tr>
+            <td><b>NOMBRE</b></td>
+            <td><b>APELLIDO</b></td>
+            <td><b>DESCRIPCIÓN</b></td>
+        </tr>
+        <tr>
+            <td id="nam"></td>
+            <td id="ape"></td>
+            <td id="des"></td>
+        </tr>
+        <tr>
+            <td id="name2"></td>
+            <td id="total2"></td>
+            <td id="total1"></td>
+        </tr>
+        <tr>
+            <td id="name3"></td>
+            <td id="total3"></td>
+            <td id="total1"></td>
+        </tr>
+       
+        </tbody>
+   
+</table>
+    
+</body>
+<script src="jquery.main.js"></script>
+<script>
+    $("#uno").click(function(){
+        var nombre = ($(this).attr("nombre"));
+        var apellido =($(this).attr("apellido"));
+        var descripcion = ($(this).attr("descripcion"));
+        $("#nam").html(nombre);
+        $("#ape").html(apellido);
+        $("#des").html(descripcion);
+    });
+    $("#dos").click(function(){
+        var nombre = ($(this).attr("nombre"));
+        var apellido =($(this).attr("apellido"));
+        var descripcion = ($(this).attr("descripcion"));
+        $("#nam").html(nombre);
+        $("#ape").html(apellido);
+        $("#des").html(descripcion);
+    });
+    $("#tres").click(function(){
+        var nombre = ($(this).attr("nombre"));
+        var apellido =($(this).attr("apellido"));
+        var descripcion = ($(this).attr("descripcion"));
+        $("#nam").html(nombre);
+        $("#ape").html(apellido);
+        $("#des").html(descripcion);
+    });
+
+</script>
+
+</html>
