@@ -124,6 +124,7 @@
     $("#dos").change(function(){
         
         var cantidad = $(this).val();
+        console.log(cantidad);
         if (cantidad <= 0) {
             alert("CANTIDAD NO VALIDA O IGUAL A 0");
             arrayArticulos[1] = 0;
